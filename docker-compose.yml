@@ -8,7 +8,7 @@ services:
     networks:
       - dawarich
     volumes:
-      - shared_data:/var/shared/redis
+      - shared_data:/data
     restart: always
     healthcheck:
       test: [ "CMD", "redis-cli", "--raw", "incr", "ping" ]
